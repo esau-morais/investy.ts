@@ -1,0 +1,4 @@
+{
+    "exec": "yarn ts-node src/index.ts",
+    "ext": ".ts,.js"
+}
