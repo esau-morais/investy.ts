@@ -8,7 +8,7 @@ import {
   Tooltip,
   XAxis
 } from 'recharts'
-import { api, defaultSymbol } from '../lib'
+import { api, defaultSymbol } from '../../lib'
 
 export default function History() {
   const [historyPrices, setHistoryPrices] = useState<Array<any>>([])
@@ -35,10 +35,8 @@ export default function History() {
 
   return (
     <div className="flex items-center justify-center my-8">
-      <ResponsiveContainer width="96%" height="100%">
+      <ResponsiveContainer width="96%" height={396}>
         <ComposedChart
-          width={500}
-          height={500}
           data={historyPrices.map((price) => price)}
           margin={{
             top: 4,

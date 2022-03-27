@@ -1,4 +1,7 @@
 # investy
+
+![Investy - Start investing now](./Cover.png)
+
 ## Table of content
 
 - [About](#about)
@@ -10,19 +13,20 @@
 
 ## About
 
-
+📈A simple stock market web app made for new investors.
 
 ## Goals
 
-- [X] Get a specific stock latest price
-- [X] Create a chart component with prices/date (daily) in a specific interval
-    - [ ] Format chart XAxis (date)
-    - [ ] Add a dynamic date picker (filtered by hours, days, months, years and all)
-- [X] List stocks to compare
-    - [X] Get the percentage (gain/loss)
-    - [ ] Add dynamic chart based on gain/los
-- [ ] Make a search input to find stocks
-    - [ ] Fiter by name and symbol
+- [x] Get a specific stock latest price
+- [x] Create a chart component with prices/date (daily) in a specific interval
+  - [ ] Format chart XAxis (date)
+  - [ ] Add a dynamic date picker (filtered by hours, days, months, years and all)
+- [x] List stocks to compare
+  - [x] Get the percentage (gain/loss)
+  - [ ] Add dynamic chart based on gain/loss
+- [X] Make a search input to find stocks
+  - [ ] Name
+  - [X] Symbol
 - [ ] Create route that redirects to specific stocks
 - [ ] Feature a news section
 
@@ -38,9 +42,12 @@
 - Jest
 
 ## Folder structure
+
 ### Client
+
 ```
 src
+├── assets // all public media (e.g.: favicon)
 ├── layouts // components in general and its styles
 ├── lib // declarations i'll need to use a lot
 ├── pages // where the components go most of the time
@@ -57,27 +64,27 @@ src
 
 2. Clone the forked repository
 
-    `git clone https://github.com/user/investy` (if you use `git`)
+   `git clone https://github.com/user/investy` (if you use `git`)
 
-    or
+   or
 
-    `gh repo clone https://github.com/user/investy` (if you use `gh` cli)
+   `gh repo clone https://github.com/user/investy` (if you use `gh` cli)
 
 3. Install the dependencies
 
-    `npm install` (if you use `npm`)
+   `npm install` (if you use `npm`)
 
-    or
+   or
 
-    `yarn` (if you use   `yarn`)
+   `yarn` (if you use `yarn`)
 
 4. Start the project
 
-    `npm start` (if you `npm`)
+   `npm start` (if you `npm`)
 
-    or
+   or
 
-    `yarn start` (if you use `yarn`)
+   `yarn start` (if you use `yarn`)
 
 **_⚠️ Before installing the dependencies, make sure you have filled the `.env` file with each API Key._**
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { defaultSymbol } from '../lib'
-import { finnhubApi } from '../lib/finnhubApi'
+import { defaultSymbol } from '../../lib'
+import { finnhubApi } from '../../lib/finnhubApi'
 
 export default function Header() {
   const [name, setName] = useState('')

@@ -1,4 +1,10 @@
-import { Compare, Footer, Header, History, Layout } from '../layouts/index'
+import {
+  Compare,
+  Footer,
+  Header,
+  History,
+  Layout
+} from '../layouts/index'
 
 export default function Home() {
   return (
