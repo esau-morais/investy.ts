@@ -1,29 +1,92 @@
-# Descrição
+# investy
+## Table of content
 
-Uma corretora de ações está desenvolvendo um sistema para permitir que pequenos investidores possam tomar decisões melhores sobre seu portfólio. Uma das funcionalidades importantes é a de verificar o desempenho de uma ação em cinco cenários:
+- [About](#about)
+- [Goals](#goals)
+- [Built with](#built-with)
+- [Folder structure](#folder-structure)
+- [Installation](#how-do-i-start)
+- [Credits](#credits)
 
-   - Preço atual;
-   - Preço histórico;
-   - Preço atual em comparação a outras ações;
-   - Projeção de ganhos com compra em data específica.
+## About
 
-Para isso, a equipe de software da empresa optou por desenvolver duas aplicações: um serviço de backend especializado nesses requisitos (que permitirá que essas funcionalidades sejam reutilizadas em outros produtos da empresa) e um dashboard configurável que dará visibilidade aos dados. Sua missão para este teste é implementar o frontend dessas partes.
 
-A ideia é implementar algo simples, sem preocupações com dividendos, taxas administrativas ou outras incumbências que afetariam o montante total. Em sendo assim, pressuponha que a compradora investiu seu dinheiro numa determinada quantidade de ações de uma empresa em alguma data no passado, e que deseja saber quanto teria ganhado ou perdido caso o fizesse.
 
-# Requisitos técnicos da solução
+## Goals
 
-- O serviço deverá ser implementado via HTTP, e o formato de serialização das requisições e respostas será JSON.
-- O frontend deverá ser um SPA(Single-Page Application) com o framework de sua escolha(React, Vue, Angular).
-- O backend já está desenvolvido, você precisará apenas criar o frontend e fazer a conexão entre as duas plataformas. Mas caso queira criar um backend também, fique à vontade.
-- Sua solução deverá ter testes automatizados.
-- Para obter dados de ações no backend, você poderá adquirir uma API_KEY gratuita no Alpha Vantage (https://www.alphavantage.co).
-- Ao final do desafio você deve enviar prints das telas funcionando.
-- O tratamento de erros não será explicitado nos endpoints. O candidato ou candidata poderá inferir casos que poderão gerar erros ou duplicidades nos dados, e tratá-los de acordo. A ausência de tratamento não desqualifica a proposta; a presença, no entanto, contará pontos a favor.
+- [X] Get a specific stock latest price
+- [X] Create a chart component with prices/date (daily) in a specific interval
+    - [ ] Format chart XAxis (date)
+    - [ ] Add a dynamic date picker (filtered by hours, days, months, years and all)
+- [X] List stocks to compare
+    - [X] Get the percentage (gain/loss)
+    - [ ] Add dynamic chart based on gain/los
+- [ ] Make a search input to find stocks
+    - [ ] Fiter by name and symbol
+- [ ] Create route that redirects to specific stocks
+- [ ] Feature a news section
 
-# Como enviar sua proposta
+## Built with
 
-- Clone esse repositório (Você pode utilizar o backend que ja está desenvolvido);
-- Implemente sua solução, fazendo commits da maneira que faria em um projeto profissional;
-- Substitua este README com um específico para sua aplicação, indicando como rodá-la, e como executar os testes (fique à vontade para inserir mais detalhes técnicos, caso deseje, isso conta pontos à favor);
-- Nos envie o link do seu desafio finalizado, juntamente com os prints de tela.
+- Vite
+  - React.js + TypeScript
+- Alpha Vantage
+- Polygon
+- Finnhub
+- Tailwind CSS
+- Recharts
+- Jest
+
+## Folder structure
+### Client
+```
+src
+├── layouts // components in general and its styles
+├── lib // declarations i'll need to use a lot
+├── pages // where the components go most of the time
+├── styles // global.css with tailwind functions
+├── App.tsx
+├── main.tsx
+```
+
+## How do I start?
+
+1. Fork this project
+
+![Forking the project](https://camo.githubusercontent.com/6f03010c651d060f8b7cfc17da7098c1757c4ead/68747470733a2f2f6669727374636f6e747269627574696f6e732e6769746875622e696f2f6173736574732f526561646d652f666f726b2e706e67)
+
+2. Clone the forked repository
+
+    `git clone https://github.com/user/investy` (if you use `git`)
+
+    or
+
+    `gh repo clone https://github.com/user/investy` (if you use `gh` cli)
+
+3. Install the dependencies
+
+    `npm install` (if you use `npm`)
+
+    or
+
+    `yarn` (if you use   `yarn`)
+
+4. Start the project
+
+    `npm start` (if you `npm`)
+
+    or
+
+    `yarn start` (if you use `yarn`)
+
+**_⚠️ Before installing the dependencies, make sure you have filled the `.env` file with each API Key._**
+
+Get Alpha Vantage API Key [here](https://www.alphavantage.co/support/#api-key)
+
+Purchase your Polygon API Key [here](https://polygon.io/dashboard/signup)
+
+Don't forget about [Finnhub](https://finnhub.io/register) as well
+
+---
+
+[LICENSE](./LICENSE)
