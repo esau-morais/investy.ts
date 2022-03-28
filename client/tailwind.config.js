@@ -5,7 +5,7 @@ module.exports = {
       gridTemplateRows: {
         auto: 'auto 1fr auto',
       },
-    }
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 }

@@ -17,14 +17,20 @@ export default function History() {
     getHistory()
   }, [])
 
-  // fetch local api to get the history prices in a specific interval (from -> to) with this format yyyy-mm-dd
+  // fetch local api to get the history prices in a specific interval (from -> to) with the format yyyy-mm-dd
   const getHistory = async () => {
     const currentDate = new Date()
+    const lastThreeMonthsDate = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() - 91 // three months ago
+    )
     const formattedDate = `${format(currentDate, 'yyyy-MM-dd')}`
+    const formattedYesterdaysDate = `${format(lastThreeMonthsDate, 'yyyy-MM-dd')}`
 
     try {
       const response = await api.get(
-        `/stocks/${defaultSymbol}/history?from=2022-01-01&to=${formattedDate}`
+        `/stocks/${defaultSymbol}/history?from=${formattedYesterdaysDate}&to=${formattedDate}`
       )
       const data = await response.data
       setHistoryPrices(data.prices)
@@ -34,15 +40,22 @@ export default function History() {
   }
 
   return (
-    <div className="flex items-center justify-center my-8">
-      <ResponsiveContainer width="96%" height={396}>
+    <div className="flex flex-col items-center justify-center my-8">
+      <div className="flex items-center justify-between w-full my-4 text-rose-100/90">
+        <h2 className="text-xl font-bold">Overview</h2>
+        <div className="flex items-center space-x-4 font-medium justify-evenly">
+          
+        </div>
+      </div>
+      <ResponsiveContainer width="98%" height="100%">
         <ComposedChart
           data={historyPrices.map((price) => price)}
+          style={{height: '48vh'}}
           margin={{
             top: 4,
-            right: 30,
-            left: 20,
-            bottom: 5,
+            right: 8,
+            left: 8,
+            bottom: 4,
           }}
         >
           <defs>
@@ -53,13 +66,13 @@ export default function History() {
           </defs>
           <CartesianGrid stroke="#ffe4e6b3" vertical={false} />
 
+          {/* Displays each prices' by date on hover */}
           <Tooltip
             wrapperClassName="rounded-lg font-sans font-medium  text-white"
             contentStyle={{ backgroundColor: 'black', border: 'none' }}
           />
-          <XAxis
-            dataKey="pricedAt"
-          />
+          {/* Displays each prices' date */}
+          <XAxis dataKey="pricedAt" />
           <Area
             type="monotone"
             dataKey="closing"

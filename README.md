@@ -28,7 +28,7 @@
   - [ ] Name
   - [X] Symbol
 - [ ] Create route that redirects to specific stocks
-- [ ] Feature a news section
+- [X] Feature a news section
 
 ## Built with
 

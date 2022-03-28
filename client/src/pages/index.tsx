@@ -3,7 +3,8 @@ import {
   Footer,
   Header,
   History,
-  Layout
+  Layout,
+  Feed,
 } from '../layouts/index'
 
 export default function Home() {
@@ -18,6 +19,9 @@ export default function Home() {
 
         {/* List stocks */}
         <Compare />
+
+        {/* News feed filtered to forex's category */}
+        <Feed />
 
         {/* Credits */}
         <Footer />
