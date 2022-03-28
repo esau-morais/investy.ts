@@ -50,7 +50,7 @@
 ```
 src
 ├── assets // all public media (e.g.: favicon)
-├── layouts // components in general and its styles
+├── layouts // components in general, its styles and tests
 ├── lib // declarations i'll need to use a lot
 ├── pages // where the components go most of the time
 ├── styles // global.css with tailwind functions

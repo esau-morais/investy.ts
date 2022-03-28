@@ -31,11 +31,15 @@ export default function Feed() {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {results.map((result) => (
           <Quote key={result.id}>
-            <Quote.Anchor href={result.url}>
+            <Quote.Anchor
+              href={result.url}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <img
                 src={result.image === '' ? '/Cover.png' : result.image}
                 alt={result.headline}
-                loading='lazy'
+                loading="lazy"
               />
               <Quote.Title>{result.headline}</Quote.Title>
               <Quote.Text>{result.summary}</Quote.Text>

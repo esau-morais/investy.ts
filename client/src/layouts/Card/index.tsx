@@ -1,6 +1,6 @@
 import cx from 'clsx'
 import React, { AnchorHTMLAttributes } from 'react'
-import { FOCUS_VISIBLE_OUTLINE } from '../lib'
+import { FOCUS_VISIBLE_OUTLINE } from '../../lib'
 
 export default function Quote({ children }: { children: React.ReactNode }) {
   return (
@@ -22,6 +22,7 @@ function Anchor(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
         'block rounded-2xl bg-white/[2%] p-4 shadow-surface-elevation-low transition duration-300 hover:bg-white/[3%] hover:shadow-surface-elevation-medium',
         FOCUS_VISIBLE_OUTLINE
       )}
+      data-testid="quote"
       {...props}
     >
       {props.children}
