@@ -6,7 +6,7 @@ export default function Search(props: InputHTMLAttributes<HTMLInputElement>) {
       <input
         type="text"
         className="w-full h-full p-4 bg-transparent border-none outline-none placeholder:text-gray-500"
-        placeholder='Search stock by symbol'
+        placeholder='Search stock by symbol (e.g.: AMZN)'
         {...props}
       />
     </div>

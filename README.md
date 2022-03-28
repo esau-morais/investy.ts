@@ -15,6 +15,8 @@
 
 📈A simple stock market web app made for new investors.
 
+![](./preview.gif)
+
 ## Goals
 
 - [x] Get a specific stock latest price
