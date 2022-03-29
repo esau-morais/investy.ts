@@ -8,7 +8,7 @@ export default function Compare() {
   const [results, setResults] = useState<Array<any>>([])
 
   const currentDate = new Date()
-  const yesterday = currentDate.setDate(currentDate.getDate() - 2)
+  const yesterday = currentDate.setDate(currentDate.getDate() - 1)
   const formattedDate = `${format(yesterday, 'yyyy-MM-dd')}`
   const prettierFormatDate = `${format(yesterday, 'MMM do, yyyy')}`
 
@@ -16,7 +16,7 @@ export default function Compare() {
     getGroupedDaily()
   }, [])
 
-  // fetch from polygon api a list of stocks by last updated date (yyyy-mm-dd)
+  // fetch from polygon api a list of stocks by la  st updated date (yyyy-mm-dd)
   const getGroupedDaily = async () => {
     const response = await fetch(
       `https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/${formattedDate}?queryCount=20&apiKey=${
@@ -24,6 +24,7 @@ export default function Compare() {
       }`
     )
     const data = await response.json()
+    console.log(data)
     setResults(data.results)
   }
 

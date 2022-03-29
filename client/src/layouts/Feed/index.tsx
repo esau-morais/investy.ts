@@ -29,7 +29,7 @@ export default function Feed() {
       <h1 className="flex items-start mb-4 text-2xl font-bold">Market News</h1>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {results.map((result) => (
+        {results?.map((result) => (
           <Quote key={result.id}>
             <Quote.Anchor
               href={result.url}
