@@ -49,7 +49,7 @@ export default function History() {
         <div className="flex items-center space-x-4 font-medium justify-evenly"></div>
       </div>
       <div className='w-full h-full'>
-        <ResponsiveContainer width='100%' height={348}>
+        <ResponsiveContainer width='96%' height={348}>
           <ComposedChart
             data={historyPrices.map((price) => price)}
             margin={{
